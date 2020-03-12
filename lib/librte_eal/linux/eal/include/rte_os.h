@@ -11,6 +11,7 @@
  * linux OS. Functions will be added in future releases.
  */
 
+#define _GNU_SOURCE 1
 #include <sched.h>
 
 typedef cpu_set_t rte_cpuset_t;

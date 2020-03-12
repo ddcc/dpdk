@@ -2,6 +2,10 @@
  * Copyright(c) 2010-2014 Intel Corporation
  */
 
+#include <rte_per_lcore.h>
+#include <rte_errno.h>
+#include <rte_string_fns.h>
+
 /* Use XSI-compliant portable version of strerror_r() */
 #undef _GNU_SOURCE
 
@@ -10,10 +14,6 @@
 #include <string.h>
 #include <stdarg.h>
 #include <errno.h>
-
-#include <rte_per_lcore.h>
-#include <rte_errno.h>
-#include <rte_string_fns.h>
 
 RTE_DEFINE_PER_LCORE(int, _rte_errno);
 
