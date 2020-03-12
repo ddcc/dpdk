@@ -147,7 +147,8 @@ if numa_dep.found() and cc.has_header('numaif.h')
 endif
 
 # check for libbsd
-libbsd = dependency('libbsd', required: false)
+#libbsd = dependency('libbsd', required: false)
+libbsd = disabler()
 if libbsd.found()
 	dpdk_conf.set('RTE_USE_LIBBSD', 1)
 endif

@@ -363,7 +363,8 @@ cflags += '-D_GNU_SOURCE'
 
 test_dep_objs = []
 if dpdk_conf.has('RTE_LIBRTE_COMPRESSDEV')
-	compress_test_dep = dependency('zlib', required: false)
+        #compress_test_dep = dependency('zlib', required: false)
+        compress_test_dep = disabler()
 	if compress_test_dep.found()
 		test_dep_objs += compress_test_dep
 		test_sources += 'test_compressdev.c'

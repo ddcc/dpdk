@@ -3,7 +3,8 @@
 
 sources = files('rte_eth_af_xdp.c')
 
-bpf_dep = dependency('libbpf', required: false)
+#bpf_dep = dependency('libbpf', required: false)
+bpf_dep = disabler()
 if not bpf_dep.found()
 	bpf_dep = cc.find_library('bpf', required: false)
 endif

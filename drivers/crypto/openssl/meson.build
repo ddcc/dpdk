@@ -1,7 +1,8 @@
 # SPDX-License-Identifier: BSD-3-Clause
 # Copyright(c) 2017 Intel Corporation
 
-dep = dependency('libcrypto', required: false)
+#dep = dependency('libcrypto', required: false)
+dep = disabler()
 if not dep.found()
 	build = false
 	reason = 'missing dependency, "libcrypto"'

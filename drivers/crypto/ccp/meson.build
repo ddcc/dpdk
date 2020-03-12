@@ -5,7 +5,8 @@ if not is_linux
 	build = false
 	reason = 'only supported on linux'
 endif
-dep = dependency('libcrypto', required: false)
+#dep = dependency('libcrypto', required: false)
+dep = disabler()
 if not dep.found()
 	build = false
 	reason = 'missing dependency, "libcrypto"'
